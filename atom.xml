@@ -6,7 +6,7 @@
   <link href="https://youdi1012.github.io/atom.xml" rel="self"/>
   
   <link href="https://youdi1012.github.io/"/>
-  <updated>2022-01-23T10:46:08.820Z</updated>
+  <updated>2022-01-25T07:05:53.872Z</updated>
   <id>https://youdi1012.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://youdi1012.github.io/2022/01/24/hello-world/"/>
-    <id>https://youdi1012.github.io/2022/01/24/hello-world/</id>
-    <published>2022-01-24T05:38:37.982Z</published>
-    <updated>2022-01-23T10:46:08.820Z</updated>
+    <link href="https://youdi1012.github.io/2022/01/02/hello-world/"/>
+    <id>https://youdi1012.github.io/2022/01/02/hello-world/</id>
+    <published>2022-01-01T16:00:00.000Z</published>
+    <updated>2022-01-25T07:05:53.872Z</updated>
     
     
       
@@ -34,6 +34,8 @@
     
     
     
+    
+    <category term="Hexo" scheme="https://youdi1012.github.io/tags/Hexo/"/>
     
   </entry>
   
