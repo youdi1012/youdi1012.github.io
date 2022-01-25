@@ -889,15 +889,15 @@
     main<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="4-CBC字节翻转攻击"><a href="#4-CBC字节翻转攻击" class="headerlink" title="4 CBC字节翻转攻击"></a>4 CBC字节翻转攻击</h2><p><img src="/2022/1.jpg"></p>
+<h2 id="4-CBC字节翻转攻击"><a href="#4-CBC字节翻转攻击" class="headerlink" title="4 CBC字节翻转攻击"></a>4 CBC字节翻转攻击</h2><p><img src="/img/%E5%AF%86%E7%A0%81%E5%AD%A6%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/1.jpg"></p>
 <p>打开容器后看到登录页面</p>
-<p><img src="/2022/2.png"></p>
+<p><img src="/img/%E5%AF%86%E7%A0%81%E5%AD%A6%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/2.png"></p>
 <p>通过dirsearch扫一下目录发现扫除一个.index.php.swp文件</p>
-<p><img src="/2022/Users/LLD\AppData\Roaming\Typora\typora-user-images\image-20211230165656141.png" alt="image-20211230165656141"></p>
+<p><img src="/img/%E5%AF%86%E7%A0%81%E5%AD%A6%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/3.png"></p>
 <p>get请求获取文件</p>
-<p><img src="/2022/Users/LLD\AppData\Roaming\Typora\typora-user-images\image-20211230165710107.png" alt="image-20211230165710107"></p>
+<p><img src="/img/%E5%AF%86%E7%A0%81%E5%AD%A6%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/4.png"></p>
 <p>打不开，拿到kali用vi去修复 ，命令为vi -r index.php.swp，进入修复后的文件</p>
-<p><img src="/2022/Users/LLD\AppData\Roaming\Typora\typora-user-images\image-20211230165810107.png" alt="image-20211230165810107"></p>
+<p><img src="/img/%E5%AF%86%E7%A0%81%E5%AD%A6%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/5.png"></p>
 <p>代码：</p>
 <pre class="line-numbers language-php+HTML" data-language="php+HTML"><code class="language-php+HTML">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;;
 &lt;html&gt;
@@ -1006,7 +1006,7 @@ if(isset($_POST['username']) &amp;&amp; isset($_POST['password'])){
 
 <p>以上代码考察了CBC翻转攻击的利用。它禁止直接提交用户名为admin进行登陆，但是返回flag的条件又是session中用户名要是admin。所以需要构造类似”edmin”形式或者”aemin”等形式的用户名，之后通过修改iv和cipher，通过CBC翻转攻击将字符e还原成”admin”</p>
 <p>我们从这里可以看到iv和cipher</p>
-<p><img src="/2022/Users/LLD\AppData\Roaming\Typora\typora-user-images\image-20211230182038092.png" alt="image-20211230182038092"></p>
+<p><img src="/img/%E5%AF%86%E7%A0%81%E5%AD%A6%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/6.png"></p>
 <p>修改cipher，然后再bp中的cookie中设置iv和翻转后的cipher，提交。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> urllib <span class="token keyword">import</span> parse
 <span class="token keyword">import</span> base64
@@ -1044,12 +1044,12 @@ iv <span class="token operator">=</span> parse<span class="token punctuation">.<
 <p>把得到的新的修复的iv值替换掉，cipher仍然为翻转后的cipher，然后提交，查看返回包，就能拿到<strong>flag{d6a8f9dccca121b77a6f3cc7416fc3cb}</strong></p>
 <p><strong>下面简单介绍一下CBC字节翻转攻击</strong></p>
 <p>CBC加密的特性，简述来说：<br>明文首先被分割成等长的若干个明文块，每个明文块将作为下一个明文块加密过程中输入的一部分，从而影响到下一个明文块的加密结果。在一般情况下，明文会被分成等长的16字节的明文块，不足16字节部分，会用特殊填充符填充，图示如下：</p>
-<p><img src="/2022/Users/LLD\AppData\Roaming\Typora\typora-user-images\image-20211230184209045.png" alt="image-20211230184209045"></p>
+<p><img src="/img/%E5%AF%86%E7%A0%81%E5%AD%A6%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/7.png"></p>
 <p>这其中有一个重要输入IV，是随机生成的初始向量，它影响第一个明文块的结果，并且将传递到整个加密链中，以保证对同一明文每次的加密结果都是不同的。<br><strong>CBC模式中涉及到的异或运算，是本次进行CBC翻转攻击的关键所在。</strong></p>
 <p>类似于CBC加密的过程，CBC解密的过程也是将当前的密文块作为下一个密文块参与运算的输入，具体如图：</p>
-<p><img src="/2022/Users/LLD\AppData\Roaming\Typora\typora-user-images\image-20211230184320183.png" alt="image-20211230184320183"></p>
+<p><img src="/img/%E5%AF%86%E7%A0%81%E5%AD%A6%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/8.png"></p>
 <p>假设我们修改了第一个密文块的第4个字节，那么根据CBC模式的解密，它将影响下一个密文块的解密结果，如图标红部分：</p>
-<p><img src="/2022/Users/LLD\AppData\Roaming\Typora\typora-user-images\image-20211230184342402.png" alt="image-20211230184342402"></p>
+<p><img src="/img/%E5%AF%86%E7%A0%81%E5%AD%A6%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/9.png"></p>
 <p><strong>那么CBC翻转攻击如下：</strong></p>
 <pre class="line-numbers language-none"><code class="language-none">我们知道已知A=B^C，可以得到结论B=A^C，并且也能得到A^C^B=0
 
