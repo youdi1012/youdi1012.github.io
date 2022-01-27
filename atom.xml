@@ -6,7 +6,7 @@
   <link href="https://youdi1012.github.io/atom.xml" rel="self"/>
   
   <link href="https://youdi1012.github.io/"/>
-  <updated>2022-01-27T04:56:41.968Z</updated>
+  <updated>2022-01-27T05:03:23.744Z</updated>
   <id>https://youdi1012.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://youdi1012.github.io/2022/012625167.html"/>
     <id>https://youdi1012.github.io/2022/012625167.html</id>
     <published>2022-01-26T11:55:34.000Z</published>
-    <updated>2022-01-27T04:56:41.968Z</updated>
+    <updated>2022-01-27T05:03:23.744Z</updated>
     
     
       
@@ -37,6 +37,8 @@
     
     <category term="JAVA" scheme="https://youdi1012.github.io/categories/JAVA/"/>
     
+    
+    <category term="JAVA" scheme="https://youdi1012.github.io/tags/JAVA/"/>
     
   </entry>
   
