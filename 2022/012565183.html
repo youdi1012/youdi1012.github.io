@@ -488,14 +488,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-25
+                    2022-01-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.2k
+                    3.1k
                 </div>
                 
 
@@ -526,6 +526,7 @@
 <p>algorithmsarequitegeneraldefinitionsofarithmeticprocesses</p>
 <p>algorithms are quite general definitions of arithmetic processes</p>
 <p>统计26个英文字母在密文中的频率分布</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -535,7 +536,8 @@
 <th>频率</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>A</td>
 <td>2</td>
 <td>N</td>
@@ -613,20 +615,44 @@
 <td>Z</td>
 <td>0</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>频率较高的前五位是：R    D    E    H    K</p>
 <p>按照英文字母的频率统计，推测R就是E，D就是T</p>
-<p>设仿射加密函数为<br>$$<br>e(x)≡ax+b(mod26)<br>$$<br>联立解a，b的值，检查gcd(a，26)=1是否成立</p>
-<p>（1）推测R是E，D是T<br>$$<br>e(4)=17，e(19)=3<br>$$<br>解得：<br>$$<br>a=6，b=16，gcd(a，26)=2<br>$$<br>（2）推测R是E，E是T<br>$$<br>e(4)=17，e(19)=4<br>$$<br>解得：</p>
-<p>$$<br>a=13，b=17，gcd(a，26)=13<br>$$<br>（3）推测R是E，H是T<br>$$<br>e(4)=17，e(19)=7<br>$$<br>解得：</p>
-<p>$$<br>a=8，b=11，gcd(a，26)=2<br>$$<br>（4）推测R是E，K是T<br>$$<br>e(4)=17，e(19)=10<br>$$<br>解得：<br>$$<br>a=3，b=5，gcd(a，26)=1<br>$$<br>a的逆元：<br>$$<br>a^{-1}(mod26）=9<br>$$</p>
-<p>推测出R就是E，K就是T，进而算出：</p>
-<p>加密：<br>$$<br>e(x) = (3x+5) mod 26<br>$$<br>解密：<br>$$<br>d(y) = 9(y-5) mod 26<br>$$<br>最后求出明文为：</p>
+<p>设仿射加密函数为</p>
+<script type="math/tex; mode=display">
+e(x)≡ax+b(mod26)</script><p>联立解a，b的值，检查gcd(a，26)=1是否成立</p>
+<p>（1）推测R是E，D是T</p>
+<script type="math/tex; mode=display">
+e(4)=17，e(19)=3</script><p>解得：</p>
+<script type="math/tex; mode=display">
+a=6，b=16，gcd(a，26)=2</script><p>（2）推测R是E，E是T</p>
+<script type="math/tex; mode=display">
+e(4)=17，e(19)=4</script><p>解得：</p>
+<script type="math/tex; mode=display">
+a=13，b=17，gcd(a，26)=13</script><p>（3）推测R是E，H是T</p>
+<script type="math/tex; mode=display">
+e(4)=17，e(19)=7</script><p>解得：</p>
+<script type="math/tex; mode=display">
+a=8，b=11，gcd(a，26)=2</script><p>（4）推测R是E，K是T</p>
+<script type="math/tex; mode=display">
+e(4)=17，e(19)=10</script><p>解得：</p>
+<script type="math/tex; mode=display">
+a=3，b=5，gcd(a，26)=1</script><p>a的逆元：</p>
+<script type="math/tex; mode=display">
+a^{-1}(mod26）=9</script><p>推测出R就是E，K就是T，进而算出：</p>
+<p>加密：</p>
+<script type="math/tex; mode=display">
+e(x) = (3x+5) mod 26</script><p>解密：</p>
+<script type="math/tex; mode=display">
+d(y) = 9(y-5) mod 26</script><p>最后求出明文为：</p>
 <p>algorithms are quite general definitions of arithmetic processes</p>
 <h2 id="2-单表密码分析"><a href="#2-单表密码分析" class="headerlink" title="2 单表密码分析"></a>2 单表密码分析</h2><p>明文和密文之间的关系是一一对应的。</p>
 <p>v    密文：<br>YKHLBA <strong>JCZ</strong> SVIJ JZB LZVHI JCZ VHJ DR IZXKHLBA VSS RDHEI DR YVJV LBXSKYLBA YLALJVS IFZZXC CVI LEFHDNZY EVBTRDSY JCZ FHLEVHT HZVIDB RDH JCLI CVI WZZB <strong>JCZ</strong> VYNZBJ DR ELXHDZSZXJHDBLXI JCZ XDEFSZQLJT DR JCZ RKBXJLDBI JCVJ XVB BDP WZ FZHRDHEZY WT <strong>JCZ</strong> EVXCLBZ CVI HLIZB YHVEVJLXVSST VI V HZIKSJ DR JCLI JCVJ PZHZ DBXZ XDBILYZHZY IZXKHZ VHZ BDP WHZVMVWSZ</p>
 <p>这段密文还有338个字母，按出现次数由多到少的顺序排列，依次为Z，J，V，B，H，D，I，L，C，X，S ，Y，E，R，T，F， K，A，W，N， P， M，Q，U，G，O。</p>
 <p>由于Z出现的次数高于其它字母，推断z对应明文字母e，看到jcz 出现了三次，英文中最常用的三个字的单词就是the，所以先锁定这三个的翻译，从这里打开突破口，推断J对面明文字母t，C对应明文字母h。继而密文JCVJ中，我们判断V对应明文字母a，即为that。再观察JZB，我们进行可能的试探，得到结果为ten，即B对应n。密文VI，V为a，猜测I为明文的s，即as。我们继续猜测VSS，S对应明文中的l，即all。猜测DR中，D代表o，故DR可能代表or on of ok中的一个，or意味着明文字母r与自身相对应，显然不和理。由于B代表n，所以也不是on。那么R必代表f或k。如果代表k，则RDH译为kor，不合理，故R代表明文f，即of。基于此，我们对密文不断尝试和拆解，得到明密文对应表：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -636,7 +662,8 @@
 <th>密文</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>a</td>
 <td>V</td>
 <td>n</td>
@@ -714,7 +741,9 @@
 <td>z</td>
 <td>U</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>依据上表，对密文求解得到明文：</p>
 <p>during the last ten years the art of securing all forms of data including digital speech has improved manyfold primary reason for this has been the advent of microelectronics the complexity of the function that can now be performed by the machine has risen dramatically as a result of this recentdevelopment technology many of the cipher system that were once considered secure are now breakable</p>
 <h2 id="3-维吉尼亚"><a href="#3-维吉尼亚" class="headerlink" title="3 维吉尼亚"></a>3 维吉尼亚</h2><p>密文：</p>
@@ -888,16 +917,15 @@
 <span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
     main<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="4-CBC字节翻转攻击"><a href="#4-CBC字节翻转攻击" class="headerlink" title="4 CBC字节翻转攻击"></a>4 CBC字节翻转攻击</h2><p><img src="/img/%E5%AF%86%E7%A0%81%E5%AD%A6%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/1.jpg"></p>
+<h2 id="4-CBC字节翻转攻击"><a href="#4-CBC字节翻转攻击" class="headerlink" title="4 CBC字节翻转攻击"></a>4 CBC字节翻转攻击</h2><p><img src="/img/密码学课程作业/1.jpg" alt></p>
 <p>打开容器后看到登录页面</p>
-<p><img src="/img/%E5%AF%86%E7%A0%81%E5%AD%A6%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/2.png"></p>
+<p><img src="/img/密码学课程作业/2.png" alt></p>
 <p>通过dirsearch扫一下目录发现扫除一个.index.php.swp文件</p>
-<p><img src="/img/%E5%AF%86%E7%A0%81%E5%AD%A6%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/3.png"></p>
+<p><img src="/img/密码学课程作业/3.png" alt></p>
 <p>get请求获取文件</p>
-<p><img src="/img/%E5%AF%86%E7%A0%81%E5%AD%A6%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/4.png"></p>
+<p><img src="/img/密码学课程作业/4.png" alt></p>
 <p>打不开，拿到kali用vi去修复 ，命令为vi -r index.php.swp，进入修复后的文件</p>
-<p><img src="/img/%E5%AF%86%E7%A0%81%E5%AD%A6%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/5.png"></p>
+<p><img src="/img/密码学课程作业/5.png" alt></p>
 <p>代码：</p>
 <pre class="line-numbers language-php+HTML" data-language="php+HTML"><code class="language-php+HTML">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;;
 &lt;html&gt;
@@ -1003,10 +1031,9 @@ if(isset($_POST['username']) &amp;&amp; isset($_POST['password'])){
 ?&gt;
 &lt;/html&gt;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>以上代码考察了CBC翻转攻击的利用。它禁止直接提交用户名为admin进行登陆，但是返回flag的条件又是session中用户名要是admin。所以需要构造类似”edmin”形式或者”aemin”等形式的用户名，之后通过修改iv和cipher，通过CBC翻转攻击将字符e还原成”admin”</p>
 <p>我们从这里可以看到iv和cipher</p>
-<p><img src="/img/%E5%AF%86%E7%A0%81%E5%AD%A6%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/6.png"></p>
+<p><img src="/img/密码学课程作业/6.png" alt></p>
 <p>修改cipher，然后再bp中的cookie中设置iv和翻转后的cipher，提交。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> urllib <span class="token keyword">import</span> parse
 <span class="token keyword">import</span> base64
@@ -1021,7 +1048,6 @@ bytes_cipher<span class="token punctuation">[</span><span class="token number">9
 cipher <span class="token operator">=</span> parse<span class="token punctuation">.</span>quote<span class="token punctuation">(</span>base64<span class="token punctuation">.</span>b64encode<span class="token punctuation">(</span>bytes_cipher<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
 <span class="token keyword">print</span><span class="token punctuation">(</span>cipher<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>但是出现服务器提示反序列化失败，原因是在我们修改edmin为admin的时候，是通过修改第一块数据来修改的，所以第一个块数据被破坏。程序中要求username要等于admin，所以不能利用文章里的说的填充字符。 第一个块数据被破坏，但第一个块数据是和IV有关，所以只要将在CBC字符翻转攻击，得到新的IV就可以修复第一块数据。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> urllib <span class="token keyword">import</span> parse
 <span class="token keyword">import</span> base64
@@ -1040,16 +1066,15 @@ iv <span class="token operator">=</span> parse<span class="token punctuation">.<
 <span class="token keyword">print</span><span class="token punctuation">(</span>iv<span class="token punctuation">)</span>
 
 <span class="token comment">#得到iv：FCy09x5W2rwJay4T3F72wA%3D%3D</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>把得到的新的修复的iv值替换掉，cipher仍然为翻转后的cipher，然后提交，查看返回包，就能拿到<strong>flag{d6a8f9dccca121b77a6f3cc7416fc3cb}</strong></p>
 <p><strong>下面简单介绍一下CBC字节翻转攻击</strong></p>
 <p>CBC加密的特性，简述来说：<br>明文首先被分割成等长的若干个明文块，每个明文块将作为下一个明文块加密过程中输入的一部分，从而影响到下一个明文块的加密结果。在一般情况下，明文会被分成等长的16字节的明文块，不足16字节部分，会用特殊填充符填充，图示如下：</p>
-<p><img src="/img/%E5%AF%86%E7%A0%81%E5%AD%A6%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/7.png"></p>
+<p><img src="/img/密码学课程作业/7.png" alt></p>
 <p>这其中有一个重要输入IV，是随机生成的初始向量，它影响第一个明文块的结果，并且将传递到整个加密链中，以保证对同一明文每次的加密结果都是不同的。<br><strong>CBC模式中涉及到的异或运算，是本次进行CBC翻转攻击的关键所在。</strong></p>
 <p>类似于CBC加密的过程，CBC解密的过程也是将当前的密文块作为下一个密文块参与运算的输入，具体如图：</p>
-<p><img src="/img/%E5%AF%86%E7%A0%81%E5%AD%A6%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/8.png"></p>
+<p><img src="/img/密码学课程作业/8.png" alt></p>
 <p>假设我们修改了第一个密文块的第4个字节，那么根据CBC模式的解密，它将影响下一个密文块的解密结果，如图标红部分：</p>
-<p><img src="/img/%E5%AF%86%E7%A0%81%E5%AD%A6%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/9.png"></p>
+<p><img src="/img/密码学课程作业/9.png" alt></p>
 <p><strong>那么CBC翻转攻击如下：</strong></p>
 <pre class="line-numbers language-none"><code class="language-none">我们知道已知A=B^C，可以得到结论B=A^C，并且也能得到A^C^B=0
 
@@ -1057,7 +1082,6 @@ iv <span class="token operator">=</span> parse<span class="token punctuation">.<
 因为A^B=C，根据结论有B=A^C
 如果人为将A变量值改变为A^C的结果，那么参与运算后A^B将等于A^C^B=B^B=0，第二个产生的明文的第4个字节将变为0
 如果将A变量值改变为A^C^X（这里X是任意字符），那么参与运算后，A^B将等于A^C^X^B=B^X^B=X，第二个产生的明文的第4个字节将变为X字符，这样，第二块密文块解密的结果就可控了。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h2 id="5-SM3算法PPT制作"><a href="#5-SM3算法PPT制作" class="headerlink" title="5 SM3算法PPT制作"></a>5 SM3算法PPT制作</h2><h2 id="6-实践反哺理论，谈谈这门课"><a href="#6-实践反哺理论，谈谈这门课" class="headerlink" title="6 实践反哺理论，谈谈这门课"></a>6 实践反哺理论，谈谈这门课</h2>
                 
             </div>
