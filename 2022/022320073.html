@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 五味杂想">
-    <meta name="description" content="Welcome to Hexo!">
+    <meta name="keywords" content="kali搭建数据库, 五味杂想">
+    <meta name="description" content="Kali数据库">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 北极迪小屋</title>
+    <title>kali搭建数据库 | 北极迪小屋</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -335,12 +335,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">kali搭建数据库</h1>
                 </div>
             </div>
         </div>
@@ -456,14 +456,23 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
+                            <a href="/tags/Kali/">
+                                <span class="chip bg-color">Kali</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Kali/" class="post-category">
+                                Kali
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -472,21 +481,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-01-02
+                    2022-02-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-27
+                    2022-02-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    72
+                    433
                 </div>
                 
 
@@ -511,15 +520,51 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h1 id="kali-搭建SQli注入数据库"><a href="#kali-搭建SQli注入数据库" class="headerlink" title="kali 搭建SQli注入数据库"></a>kali 搭建SQli注入数据库</h1><p><strong>一、创建数据库</strong></p>
+<p>1.连接 MySQL</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql -u root -p        密码：d    <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>2.查看当前的数据库</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">show databases;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>3.创建数据库名</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create database 名字;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>4.创建数据库时设置字符编码</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create database 名字 character set utf8;
+
+create database 名字 charset utf8;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>查看和显示数据库的编码方式</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">show create database 名字;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>修改数据库编码</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter database 名字 character set utf8;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>5.进入或切换数据库</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">use 库名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p> 显示当前数据库<br>进入数据库中，来查看当前处于哪个数据库中。<br>长时间操作数据库时，在很多数据库中来回切换后，查看当前的数据库，避免操作错了数据库。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select database();<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>二、创建数据表</strong></p>
+<p>1.查看当前数据库中的表，查看当前数据库中有哪些表。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">show tables;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>2.创建表</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create table login(ID char(20),Password char(20));<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>3.显示表信息</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">show create table login;
+或
+desc login；<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><img src="/img/kali搭建数据库/0.png" alt></p>
+<p>4.给表增加字段，为已存在的表添加一个新字段。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table 表名 add 字段名 字段类型—CHAR(20);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>5.删除表的字段，删除一个表中已存在的字段。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table 表名 drop 字段名; <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>6.修改字段的数据类型，修改表中现有字段的数据类型。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table 表名 modify 字段名 数据类型;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>7.修改字段的数据类型并且改名，修改表中现有字段的字段名和类型。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table 表名 change 原字段名 新字段名 数据类型;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>三、创建字段信息</strong></p>
+<p>1.在表login中添加字段内容。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">insert into login values('LLD','admin');
+insert into login values('cumt','password');
+insert into login values('admin','123456');<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><img src="/img/kali搭建数据库/image-20211203154809028.png" alt></p>
+<p>2显示表login所有的字段内容。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select * from login；<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
                 
             </div>
@@ -546,7 +591,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://youdi1012.github.io/2022/010216107.html">https://youdi1012.github.io/2022/010216107.html</a>
+                    <a href="https://youdi1012.github.io/2022/022320073.html">https://youdi1012.github.io/2022/022320073.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -584,8 +629,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/tags/Kali/">
+                                    <span class="chip bg-color">Kali</span>
                                 </a>
                             
                         </div>
@@ -756,7 +801,7 @@
         repo: 'youdi1012.github.io',
         owner: 'youdi1012',
         admin: ["youdi1012"],
-        id: '2022-01-02T00-00-00',
+        id: '2022-02-23T21-35-39',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -786,46 +831,48 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/012565183.html">
+                <a href="/2022/022320073.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="密码学课程作业">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="kali搭建数据库">
                         
-                        <span class="card-title">密码学课程作业</span>
+                        <span class="card-title">kali搭建数据库</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            张立江
+                            Kali数据库
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/" class="post-category">
-                                    密码学
+                            <a href="/categories/Kali/" class="post-category">
+                                    Kali
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/">
-                        <span class="chip bg-color">密码学</span>
+                    <a href="/tags/Kali/">
+                        <span class="chip bg-color">Kali</span>
                     </a>
                     
                 </div>
@@ -836,42 +883,45 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/010216107.html">
+                <a href="/2022/012625167.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="JAVA语言及网络编程作业">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">JAVA语言及网络编程作业</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo!
+                            课程作业
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-26
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            北极迪
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JAVA/" class="post-category">
+                                    JAVA
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/JAVA/">
+                        <span class="chip bg-color">JAVA</span>
                     </a>
                     
                 </div>

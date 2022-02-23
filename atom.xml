@@ -6,7 +6,7 @@
   <link href="https://youdi1012.github.io/atom.xml" rel="self"/>
   
   <link href="https://youdi1012.github.io/"/>
-  <updated>2022-01-27T09:58:55.189Z</updated>
+  <updated>2022-02-23T13:45:58.587Z</updated>
   <id>https://youdi1012.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>kali搭建数据库</title>
+    <link href="https://youdi1012.github.io/2022/022320073.html"/>
+    <id>https://youdi1012.github.io/2022/022320073.html</id>
+    <published>2022-02-23T13:35:39.000Z</published>
+    <updated>2022-02-23T13:45:58.587Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;kali-搭建SQli注入数据库&quot;&gt;&lt;a href=&quot;#kali-搭建SQli注入数据库&quot; class=&quot;headerlink&quot; title=&quot;kali 搭建SQli注入数据库&quot;&gt;&lt;/a&gt;kali</summary>
+        
+      
+    
+    
+    
+    <category term="Kali" scheme="https://youdi1012.github.io/categories/Kali/"/>
+    
+    
+    <category term="Kali" scheme="https://youdi1012.github.io/tags/Kali/"/>
+    
+  </entry>
   
   <entry>
     <title>JAVA语言及网络编程作业</title>
@@ -47,7 +72,7 @@
     <link href="https://youdi1012.github.io/2022/012565183.html"/>
     <id>https://youdi1012.github.io/2022/012565183.html</id>
     <published>2022-01-25T07:40:41.000Z</published>
-    <updated>2022-01-27T04:56:17.476Z</updated>
+    <updated>2022-02-23T13:41:37.501Z</updated>
     
     
       
