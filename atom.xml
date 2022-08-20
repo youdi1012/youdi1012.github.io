@@ -3,11 +3,11 @@
   <title>Arctic Di&#39;s villa</title>
   
   <subtitle>Arctic Di blog</subtitle>
-  <link href="https://youdi1012.github.io/atom.xml" rel="self"/>
+  <link href="https://lld.mba/atom.xml" rel="self"/>
   
-  <link href="https://youdi1012.github.io/"/>
+  <link href="https://lld.mba/"/>
   <updated>2022-02-23T13:45:58.587Z</updated>
-  <id>https://youdi1012.github.io/</id>
+  <id>https://lld.mba/</id>
   
   <author>
     <name>北极迪</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>kali搭建数据库</title>
-    <link href="https://youdi1012.github.io/2022/022320073.html"/>
-    <id>https://youdi1012.github.io/2022/022320073.html</id>
+    <link href="https://lld.mba/2022/022320073.html"/>
+    <id>https://lld.mba/2022/022320073.html</id>
     <published>2022-02-23T13:35:39.000Z</published>
     <updated>2022-02-23T13:45:58.587Z</updated>
     
@@ -34,17 +34,17 @@
     
     
     
-    <category term="Kali" scheme="https://youdi1012.github.io/categories/Kali/"/>
+    <category term="Kali" scheme="https://lld.mba/categories/Kali/"/>
     
     
-    <category term="Kali" scheme="https://youdi1012.github.io/tags/Kali/"/>
+    <category term="Kali" scheme="https://lld.mba/tags/Kali/"/>
     
   </entry>
   
   <entry>
     <title>JAVA语言及网络编程作业</title>
-    <link href="https://youdi1012.github.io/2022/012625167.html"/>
-    <id>https://youdi1012.github.io/2022/012625167.html</id>
+    <link href="https://lld.mba/2022/012625167.html"/>
+    <id>https://lld.mba/2022/012625167.html</id>
     <published>2022-01-26T11:55:34.000Z</published>
     <updated>2022-01-27T09:58:55.189Z</updated>
     
@@ -60,17 +60,17 @@
     
     
     
-    <category term="JAVA" scheme="https://youdi1012.github.io/categories/JAVA/"/>
+    <category term="JAVA" scheme="https://lld.mba/categories/JAVA/"/>
     
     
-    <category term="JAVA" scheme="https://youdi1012.github.io/tags/JAVA/"/>
+    <category term="JAVA" scheme="https://lld.mba/tags/JAVA/"/>
     
   </entry>
   
   <entry>
     <title>密码学课程作业</title>
-    <link href="https://youdi1012.github.io/2022/012565183.html"/>
-    <id>https://youdi1012.github.io/2022/012565183.html</id>
+    <link href="https://lld.mba/2022/012565183.html"/>
+    <id>https://lld.mba/2022/012565183.html</id>
     <published>2022-01-25T07:40:41.000Z</published>
     <updated>2022-02-23T13:41:37.501Z</updated>
     
@@ -85,17 +85,17 @@
     
     
     
-    <category term="密码学" scheme="https://youdi1012.github.io/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/"/>
+    <category term="密码学" scheme="https://lld.mba/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/"/>
     
     
-    <category term="密码学" scheme="https://youdi1012.github.io/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/"/>
+    <category term="密码学" scheme="https://lld.mba/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://youdi1012.github.io/2022/010216107.html"/>
-    <id>https://youdi1012.github.io/2022/010216107.html</id>
+    <link href="https://lld.mba/2022/010216107.html"/>
+    <id>https://lld.mba/2022/010216107.html</id>
     <published>2022-01-01T16:00:00.000Z</published>
     <updated>2022-01-27T10:00:30.714Z</updated>
     
@@ -111,7 +111,7 @@
     
     
     
-    <category term="Hexo" scheme="https://youdi1012.github.io/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://lld.mba/tags/Hexo/"/>
     
   </entry>
   
