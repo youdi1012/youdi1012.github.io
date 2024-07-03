@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="kali搭建数据库, 五味杂想">
-    <meta name="description" content="Kali数据库">
+    <meta name="keywords" content="三色标记法, 五味杂想">
+    <meta name="description" content="Learning records">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>kali搭建数据库 | Arctic Di&#39;s villa</title>
+    <title>三色标记法 | Arctic Di&#39;s villa</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -335,12 +335,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/img/kali%E6%90%AD%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">kali搭建数据库</h1>
+                    <h1 class="description center-align post-title">三色标记法</h1>
                 </div>
             </div>
         </div>
@@ -456,8 +456,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Kali/">
-                                <span class="chip bg-color">Kali</span>
+                            <a href="/tags/JVM/">
+                                <span class="chip bg-color">JVM</span>
                             </a>
                         
                     </div>
@@ -468,8 +468,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Kali/" class="post-category">
-                                Kali
+                            <a href="/categories/JVM/" class="post-category">
+                                JVM
                             </a>
                         
                     </div>
@@ -481,28 +481,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-02-23
+                    2024-07-03
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-02-17
+                    2024-07-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    433
+                    2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
 
@@ -520,51 +520,78 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="kali-搭建SQli注入数据库"><a href="#kali-搭建SQli注入数据库" class="headerlink" title="kali 搭建SQli注入数据库"></a>kali 搭建SQli注入数据库</h1><p><strong>一、创建数据库</strong></p>
-<p>1.连接 MySQL</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql -u root -p        密码：d    <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>2.查看当前的数据库</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">show databases;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>3.创建数据库名</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create database 名字;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>4.创建数据库时设置字符编码</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create database 名字 character set utf8;
-
-create database 名字 charset utf8;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>查看和显示数据库的编码方式</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">show create database 名字;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>修改数据库编码</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter database 名字 character set utf8;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>5.进入或切换数据库</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">use 库名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p> 显示当前数据库<br>进入数据库中，来查看当前处于哪个数据库中。<br>长时间操作数据库时，在很多数据库中来回切换后，查看当前的数据库，避免操作错了数据库。</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select database();<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><strong>二、创建数据表</strong></p>
-<p>1.查看当前数据库中的表，查看当前数据库中有哪些表。</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">show tables;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>2.创建表</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create table login(ID char(20),Password char(20));<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>3.显示表信息</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">show create table login;
-或
-desc login；<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p><img src="/img/kali搭建数据库/1.png" alt=""></p>
-<p>4.给表增加字段，为已存在的表添加一个新字段。</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table 表名 add 字段名 字段类型—CHAR(20);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>5.删除表的字段，删除一个表中已存在的字段。</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table 表名 drop 字段名; <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>6.修改字段的数据类型，修改表中现有字段的数据类型。</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table 表名 modify 字段名 数据类型;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>7.修改字段的数据类型并且改名，修改表中现有字段的字段名和类型。</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table 表名 change 原字段名 新字段名 数据类型;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><strong>三、创建字段信息</strong></p>
-<p>1.在表login中添加字段内容。</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">insert into login values('LLD','admin');
-insert into login values('cumt','password');
-insert into login values('admin','123456');<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p><img src="/img/kali搭建数据库/image-20211203154809028.png" alt=""></p>
-<p>2显示表login所有的字段内容。</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select * from login；<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="三色标记法"><a href="#三色标记法" class="headerlink" title="三色标记法"></a>三色标记法</h1><p><strong>对象什么时候可以被垃圾器回收？</strong></p>
+<ul>
+<li>如果一个对象没有任何的引用指向它，那么这个对象就是垃圾，如果定位了垃圾，就有可能被垃圾回收器回收。</li>
+<li>定位垃圾的方式有两种，第一个是引用计数法，第二个是可达性分析算法。<ul>
+<li>引用计数法：对象被引用一次，对象头上引用次数就会加一，如果对象的引用次数为0，就代表这个对象可回收。<ul>
+<li>但是引用计数法有可能会出现<strong>循环引用</strong>的问题，导致内存泄漏</li>
+</ul>
+</li>
+<li>可达性分析算法：<ul>
+<li>需要扫描堆中的对象，看是否能够沿着以 GC Root 对象为起点的引用链找到该对象，找不到，就说明可以回收</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>哪些对象可以作为 GC Root ?</strong></p>
+<ul>
+<li>虚拟机栈（栈帧中的本地变量表）中引用的对象</li>
+<li>方法区中类静态属性引用的对象</li>
+<li>方法区中常量引用的对象</li>
+<li>本地方法栈中 JNI（即一般说的 Native 方法，Native 方法是系统提供的）引用的对象</li>
+</ul>
+<h2 id="可达性分析法"><a href="#可达性分析法" class="headerlink" title="可达性分析法"></a>可达性分析法</h2><p>可达性分析法最简单的一种实现方案是：从GC Roots节点开始，使用「标记-清除」算法去实现。</p>
+<p>这种实现方案分为两个阶段，分别是：标记阶段、清除阶段。</p>
+<ul>
+<li>在标记阶段，采用可达性分析法，找到所有可达的对象。</li>
+<li>在清除阶段，扫描整个引用链的不可达对象，然后将垃圾对象清除掉。</li>
+</ul>
+<p>但这种方式有一个很大的缺点：整个过程必须「Stop the World」。这就导致整个应用程序必须停止，不能做任何改变，这是非常不友好的。</p>
+<p>为了解决上面「标记-清除」算法的问题，于是就出现了「三色标记算法」</p>
+<h2 id="三色分析法"><a href="#三色分析法" class="headerlink" title="三色分析法"></a>三色分析法</h2><p>三色标记算法指的是将所有对象分为白色、黑色和灰色三种类型：</p>
+<ul>
+<li>黑色表示该对象已经被扫描，且该对象的所有引用都已经扫描过；</li>
+<li>灰色表示该对象已经被扫描，但它引用的对象还未被完全扫描；</li>
+<li>白色表示该对象还未被扫描。</li>
+</ul>
+<p><img src="/img/三色标记法/1.webp" alt></p>
+<p>可达性分析法将整个过程拆分成了初始标记、并发标记、重新标记、并发清除四个阶段：</p>
+<ul>
+<li>初始标记阶段，指的是将 GC Roots 直接引用的节点，标记为灰色，这个阶段需要「Stop the World」</li>
+<li>并发标记阶段，指的是从灰色节点开始，去扫描整个引用链，然后将它们标记为黑色，这个阶段不需要「Stop the World」</li>
+<li>重新标记阶段，指的是去校正并发标记阶段的错误，这个阶段需要「Stop the World」</li>
+<li>并发清除，指的是将已经确定为垃圾的对象清除掉，这个阶段不需要「Stop the World」</li>
+</ul>
+<p><img src="/img/三色标记法/2.webp" alt></p>
+<p>对比一下「四阶段拆分」和「一段式」的实现方式，我们可以看出：通过将最耗时的引用链扫描剥离出来作为并发标记阶段，将其与用户线程并发执行，从而极大地降低了 GC 停顿时间。</p>
+<p>但 GC 线程与用户线程并发执行，会带来新的问题：对象引用关系可能会发生变化，有可能发生<strong>多标</strong>和<strong>漏标</strong>问题。</p>
+<h3 id="多标问题"><a href="#多标问题" class="headerlink" title="多标问题"></a>多标问题</h3><p><strong>多标问题</strong>指的是原本应该回收的对象，被多余地标记为黑色存活对象，从而导致该垃圾对象没有被回收。</p>
+<p>多标问题会导致内存产生<strong>浮动垃圾</strong>（在本轮应该被回收的垃圾没有被回收），这时产生的垃圾怎么办呢？答案是本次不处理，留给下次垃圾回收处理，因此问题还不算很严重。</p>
+<p><img src="/img/三色标记法/3.webp" alt></p>
+<p>假设已经遍历到E，此时应用执行 <code>D.E = null</code> ，此刻之后，对象E/F/G是应该被回收，但是E已经变为灰色，其仍会被当作存活对象继续遍历下去。最终的结果是：这部分对象仍会被标记为存活，即在本轮应该被回收的垃圾没有被回收。</p>
+<h3 id="漏标问题"><a href="#漏标问题" class="headerlink" title="漏标问题"></a>漏标问题</h3><p><strong>漏标问题</strong>指的是原本应该被标记为存活的对象，被遗漏标记为白色，从而导致该垃圾对象被错误回收。</p>
+<p>漏标问题就非常严重了，其会导致存活对象被回收，会严重影响程序功能。漏标问题要发生需要满足如下两个充要条件：</p>
+<ul>
+<li>黑色对象指向了白色对象</li>
+<li>灰色对象指向白色对象的引用消失</li>
+</ul>
+<p><img src="/img/三色标记法/4.webp" alt></p>
+<p>只有当上面两个条件都满足，三色标记算法才会发生漏标的问题。如果我们破坏任何一个条件，白色对象就不会被漏标。这其实就产生了两种方式，分别是：增量更新、原始快照。CMS 回收器使用的增量更新方案，G1 采用的是原始快照方案。</p>
+<h4 id="CMS-解决方案：增量更新"><a href="#CMS-解决方案：增量更新" class="headerlink" title="CMS 解决方案：增量更新"></a>CMS 解决方案：增量更新</h4><p><strong>增量更新</strong>要破坏的是第一个条件，当黑色对象插入新的指向白色对象的引用关系时，就将这个黑色对象的引用记录下来，在后续「重新标记」阶段再以这个黑色对象为根，重新扫描一次。</p>
+<p>可以简化理解为，黑色对象一旦新插入了指向白色对象的引用之后，它就变回灰色对象了。（<strong>跟踪黑指向白的增加</strong>）</p>
+<h4 id="G1-解决方案：原始快照"><a href="#G1-解决方案：原始快照" class="headerlink" title="G1 解决方案：原始快照"></a>G1 解决方案：原始快照</h4><p><strong>原始快照</strong>要破坏的是第二个条件，当灰色对象要删除指向白色对象的引用关系时，就将这个灰色对象引用的白色对象记录下来，在后续「重新标记」阶段再以这个白色对象为根，对它的引用进行扫描。</p>
+<p>可以简化理解为，无论引用关系删除与否，都会按照刚刚开始扫描那一刻的对象图快照来进行搜索。（<strong>记录灰指向白的消失</strong>）</p>
+<p>这种方式有个缺点，就是会产生浮动垃圾。因为当用户线程取消引用的时候，有可能是真的取消引用，对应的对象是真的要回收掉的。这时候我们通过这种方式，就会把本该回收的对象又复活了，从而导致出现浮动垃圾。但相对于本该存活的对象被回收，这个代价还是可以接受的，毕竟在下次 GC 的时候就可以回收了。</p>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p><strong>三色标记算法是什么？</strong></p>
+<p>三色标记算法是可达性分析法的一种实现方案，其目的是为了找出所有可达对象。</p>
+<p><strong>为什么要有三色标记算法？</strong></p>
+<p>因为传统的「标记-清除」算法效率太低，于是采用三色标记算法通过将对象分成白色、黑色、灰色，以及将整个过程拆分成「初始标记、并发标记、重新标记、并发清除」4 个过程，从而降低 GC 停顿时间。</p>
+<p><strong>三色标记算法有什么缺陷？</strong></p>
+<p>三色标记算法会产生多标和漏标问题，其中漏标问题最严重。漏标问题会导致本该存活的对象被回收，从而导致严重的程序问题。</p>
+<p><strong>漏标有什么解决方案？</strong></p>
+<p>漏标有两种解决方案，分别是：增量更新和原始快照方式。CMS回收器采用了增量更新方式，G1回收器采用了原始快照方式。</p>
 
                 
             </div>
@@ -591,7 +618,7 @@ insert into login values('admin','123456');<span aria-hidden="true" class="line-
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lld.mba/2022/022320073.html">https://lld.mba/2022/022320073.html</a>
+                    <a href="https://lld.mba/2024/070354639.html">https://lld.mba/2024/070354639.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -629,8 +656,8 @@ insert into login values('admin','123456');<span aria-hidden="true" class="line-
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Kali/">
-                                    <span class="chip bg-color">Kali</span>
+                                <a href="/tags/JVM/">
+                                    <span class="chip bg-color">JVM</span>
                                 </a>
                             
                         </div>
@@ -801,7 +828,7 @@ insert into login values('admin','123456');<span aria-hidden="true" class="line-
         repo: 'youdi1012.github.io',
         owner: 'youdi1012',
         admin: ["youdi1012"],
-        id: '2022-02-23T21-35-39',
+        id: '2024-07-03T20-31-34',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -831,45 +858,48 @@ insert into login values('admin','123456');<span aria-hidden="true" class="line-
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/021710159.html">
+                <a href="/2024/070354639.html">
                     <div class="card-image">
                         
-                        <img src="/img/%E8%8B%B1%E8%AF%AD%E9%97%AE%E7%AD%94/0.png" class="responsive-img" alt="英语问答">
                         
-                        <span class="card-title">英语问答</span>
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="三色标记法">
+                        
+                        <span class="card-title">三色标记法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            复试常见问题
+                            Learning records
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-02-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-07-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E4%BF%9D%E7%A0%94%E5%A4%8D%E8%AF%95/" class="post-category">
-                                    保研复试
+                            <a href="/categories/JVM/" class="post-category">
+                                    JVM
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/English/">
-                        <span class="chip bg-color">English</span>
+                    <a href="/tags/JVM/">
+                        <span class="chip bg-color">JVM</span>
                     </a>
                     
                 </div>
@@ -883,31 +913,30 @@ insert into login values('admin','123456');<span aria-hidden="true" class="line-
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/012625167.html">
+                <a href="/2023/042728595.html">
                     <div class="card-image">
                         
+                        <img src="/img/%E9%9D%92%E5%B2%9B%E6%8C%87%E5%8D%97/0.jpg" class="responsive-img" alt="青岛指南">
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="JAVA语言及网络编程作业">
-                        
-                        <span class="card-title">JAVA语言及网络编程作业</span>
+                        <span class="card-title">青岛指南</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            课程作业
+                            风吹哪页读哪页
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-27
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/JAVA/" class="post-category">
-                                    JAVA
+                            <a href="/categories/%E6%97%85%E8%A1%8C/" class="post-category">
+                                    旅行
                                 </a>
                             
                             
@@ -917,8 +946,8 @@ insert into login values('admin','123456');<span aria-hidden="true" class="line-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JAVA/">
-                        <span class="chip bg-color">JAVA</span>
+                    <a href="/tags/Play/">
+                        <span class="chip bg-color">Play</span>
                     </a>
                     
                 </div>
